@@ -25,3 +25,6 @@ npm run lint
 
 ### 代理配置
 本地开发通过proxy配置http请求到 3000端口的server端
+
+### postinstall
+[fix generating es5 bundles error ,count not find plugin "proposal-numeric-separator"](http://github.com/angular/angular-cli/issues/17262)
