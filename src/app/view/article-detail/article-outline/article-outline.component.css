@@ -1,0 +1,19 @@
+.devui-outline-container{
+  position: fixed;
+}
+.item-container{
+  cursor: pointer;
+}
+.item-content{
+  padding-top: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item-content:hover, .item-content.active{
+  color: #5170ff;
+}
+.item-content > span {
+  padding-left: 10px;
+}

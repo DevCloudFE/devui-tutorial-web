@@ -1,0 +1,15 @@
+body {
+  font-size: 14px;
+  color: #404040;
+  line-height: 20px;
+  background-color: #f5f5f5;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+

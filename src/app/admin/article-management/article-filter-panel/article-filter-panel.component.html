@@ -1,0 +1,76 @@
+<div class="form-item">
+  <div class="form-label">标签</div>
+  <div class="form-control">
+    <d-select
+      [size]=" "
+      [options]="tagList"
+      [placeholder]="'选择标签'"
+      [isSearch]="true"
+      [multiple]="true"
+      [isSelectAll]="true"
+      [(ngModel)]="filterOption.tags"
+    >
+    </d-select>
+  </div>
+</div>
+<div class="form-item">
+  <div class="form-label">日期</div>
+  <div class="form-control">
+    <div class="datepicker">
+      <div class="devui-input-group">
+        <input
+          class="devui-input"
+          placeholder="开始日期"
+          (focus)="datePicker1.toggle($event)"
+          [(ngModel)]="startDate"
+          (ngModelChange)="handleStartDate($event)"
+          autocomplete="off"
+          dDatepicker
+          #datePicker1="datepicker"
+          appendToBody
+        />
+        <div
+          class="devui-input-group-addon"
+          (click)="datePicker1.toggle($event)"
+        >
+          <i class="icon icon-calendar"></i>
+        </div>
+      </div>
+    </div>
+    <div class="datepicker">
+      <div class="devui-input-group">
+        <input
+          class="devui-input"
+          placeholder="结束日期"
+          (focus)="datePicker2.toggle($event)"
+          [(ngModel)]="endDate"
+          (ngModelChange)="handleEndDate($event)"
+          autocomplete="off"
+          dDatepicker
+          #datePicker2="datepicker"
+          appendToBody
+        />
+        <div
+          class="devui-input-group-addon"
+          (click)="datePicker1.toggle($event)"
+        >
+          <i class="icon icon-calendar"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<d-button
+  [type]="'button'"
+  [bsSize]="'sm'"
+  [bsStyle]="'primary'"
+  (btnClick)="updateCondition()">
+  过滤
+</d-button>
+<d-button
+  [type]="'button'"
+  [bsSize]="'sm'"
+  [bsStyle]="'common'"
+  (btnClick)="reset()">
+  重置
+</d-button>

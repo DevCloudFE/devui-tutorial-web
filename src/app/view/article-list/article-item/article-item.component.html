@@ -1,0 +1,10 @@
+<h3><a [routerLink]="['/articles', data?.id]">{{data?.title}}</a></h3>
+<div class="article-info">
+  <div class="update-time">{{(data?.updateTime || data?.createTime)|date:'yyyy-MM-dd HH:mm:ss' }}</div>
+</div>
+<div class="article-preview">
+  {{data?.content}}
+</div>
+<div class="tag-group">
+  <d-tag  *ngFor="let tag of data?.tags;" [tag]="tag" [labelStyle]="'blue-w98'"></d-tag>
+</div>

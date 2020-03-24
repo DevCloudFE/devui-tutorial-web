@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  flex: 0 0 60px;
+}
+main {
+  flex: 0 0 calc(100vh - 60px);
+  display: flex;
+  align-items: stretch;
+}
+main.fixed-width {
+  max-width: 960px;
+  align-self: center;
+  justify-content: center;
+}
+

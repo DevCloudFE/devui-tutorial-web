@@ -1,0 +1,11 @@
+<div class="devui-outline-container" [style.width]="width">
+  <div class="outline-title">文章目录</div>
+  <div class="item-container">
+    <ng-container *ngFor="let item of outlineData; let i = index">
+      <div class="item-content" [ngClass]="{'active': activeIndex === i}" (click)="scrollToView(i)">
+        <strong *ngIf="item.flag==='h1' else subTpl" title="{{item.text}}">{{item.text}}</strong>
+        <ng-template #subTpl><span title="{{item.text}}">{{item.text}}</span></ng-template>
+      </div>
+    </ng-container>
+  </div>
+</div>

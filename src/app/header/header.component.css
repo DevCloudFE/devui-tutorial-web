@@ -1,0 +1,34 @@
+:host {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  background-color: #333954;
+  color: #ffffff;
+  height: 60px;
+  line-height: 28px;
+  padding: 16px;
+}
+.logo {
+  font-size: 20px;
+}
+.user-center {
+  display: flex;
+}
+.quick-toolbar {
+  padding: 0 8px;
+  cursor: pointer;
+}
+.logo a {
+  color: #ffffff;
+}
+.name {
+  cursor: pointer;
+}
+.logout {
+  margin-left: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+

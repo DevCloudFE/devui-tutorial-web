@@ -1,0 +1,27 @@
+.form-item {
+  display: flex;
+  line-height: 32px;
+}
+.form-label {
+  flex: 0 1 80px;
+}
+.form-control {
+  flex: 0 1 calc( 100% - 120px);
+}
+.form-item:not(:first-child) {
+  margin-top: 8px;
+}
+.datepicker {
+  display: inline-block;
+}
+
+d-button,
+.datepicker:not(:first-child) {
+  margin-left: 8px;
+}
+d-select {
+  width: 240px;
+}
+.reset-date{
+  vertical-align: top;
+}

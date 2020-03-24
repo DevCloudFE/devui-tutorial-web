@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  min-height: calc(100% - 32px);
+  margin: 16px 16px 0 16px;
+  padding: 16px;
+  background-color: #fff;
+  overflow-x: auto;
+  max-width: 100%;
+}

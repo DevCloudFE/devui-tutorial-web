@@ -1,0 +1,13 @@
+<header>
+<app-header></app-header>
+</header>
+<main>
+  <aside [ngClass]="{
+    'hide': layout?.occupy === 'main'
+  }">
+    <app-admin-sidebar></app-admin-sidebar>
+  </aside>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</main>

@@ -1,0 +1,46 @@
+<div class="devui-md-container">
+    <!-- 工具栏 -->
+  <div class="toolbar-container">
+    <div class="toolbar-item undo" title="撤销" (click)="toolbarHandler.undo()">
+      <span class="icon"></span>
+    </div>
+    <div class="toolbar-item redo" title="重做" (click)="toolbarHandler.redo()">
+      <span class="icon"></span>
+    </div>
+    <div class="splitter-line"></div>
+    <div class="toolbar-item text-icon" title="一级标题" (click)="toolbarHandler.h1()">
+      <span class="icon">H1</span>
+    </div>
+    <div class="toolbar-item text-icon" title="二级标题" (click)="toolbarHandler.h2()">
+      <span class="icon">H2</span>
+    </div>
+    <div class="splitter-line"></div>
+    <div class="toolbar-item bold" title="粗体" (click)="toolbarHandler.bold()">
+      <span class="icon"></span>
+    </div>
+    <div class="toolbar-item italic" title="斜体" (click)="toolbarHandler.italic()">
+      <span class="icon"></span>
+    </div>
+    <div class="toolbar-item underline" title="下划线" (click)="toolbarHandler.underline()">
+      <span class="icon"></span>
+    </div>
+    <div class="splitter-line"></div>
+    <div class="toolbar-item ol" title="有序列表" (click)="toolbarHandler.ol()">
+      <span class="icon"></span>
+    </div>
+    <div class="toolbar-item ul" title="无序列表" (click)="toolbarHandler.ul()">
+      <span class="icon"></span>
+    </div>
+    <div class="splitter-line"></div>
+    <div class="toolbar-item table" title="表格" (click)="toolbarHandler.table()">
+      <span class="icon"></span>
+    </div>
+  </div>
+  <!-- 编辑器主容器 -->
+  <div class="editor-container">
+    <div class="md-editor">
+      <textarea #mdEditor>{{content}}</textarea>
+    </div>
+    <div class="view-container" id="viewPage-content" #previewContainer></div>
+  </div>
+</div>

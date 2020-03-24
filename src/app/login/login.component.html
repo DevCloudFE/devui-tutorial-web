@@ -1,0 +1,25 @@
+<d-toast [value]="msgs"></d-toast>
+<app-header ></app-header>
+<div class="login-content">
+    <section class="login-feild">
+        <div class="login-form">
+            <p>
+                <img src="../../../assets/img/login/login-title.png">
+            </p>
+            <p class="login-text">
+                <img src="../../../assets/img/login/login-text.png">
+            </p>
+            <form class="login-input-feild" (ngSubmit)="doLogin()">
+                <input type="text" class="login-input" placeholder="请输入账号" [(ngModel)]="userName" name="userName">
+                <input type="password" class="login-input" placeholder="请输入密码"  [(ngModel)]="password"  name="password">
+                <button class="login-btn" (click)="doLogin()"  type="submit">登录</button>
+            </form>
+            <p class="forget-password-field">
+                <span class="forget-password-text">忘记密码</span>
+                <span>修改密码</span>
+            </p>
+            <p class="login-without-password">频繁输入很麻烦? <a>我要开启(关闭)免密登录</a></p>
+        </div>
+        <div class="login-img"></div>
+    </section>
+</div>

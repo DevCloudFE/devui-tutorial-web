@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  /* background-color: burlywood; */
+  flex: 0 0 60px;
+}
+main {
+  flex: 0 0 calc(100vh - 60px);
+  display: flex;
+  align-items: stretch;
+}
+aside {
+  /* background-color: pink; */
+  flex: 1 1 150px;
+}
+aside.hide {
+  display: none;
+}
+.content {
+  /* background-color: seagreen; */
+  flex: 11 1 500px;
+}

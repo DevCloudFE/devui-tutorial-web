@@ -1,0 +1,9 @@
+<div class="logo"><a [routerLink]="'/'">DevUI </a> </div>
+<div class="user-center">
+  <div class="quick-toolbar" [routerLink]="'/admin/articles/new'">写文章</div>
+  <div class="user" *ngIf="userInfo && userInfo.userName">
+    <span class="avatar"></span>
+    <span class="name" [routerLink]="'/admin'">{{ userInfo.userName }}</span>
+    <span class="logout" (click)="logout()">退出</span>
+  </div>
+</div>

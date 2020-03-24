@@ -1,0 +1,89 @@
+<div class="toolbar">
+  <div class="search-area">
+    <d-search [(ngModel)]="keyword" [placeholder]="'搜索关键字'" (searchFn)="onSearch()"></d-search>
+    <d-button bsStyle="text-dark" (btnClick)="toggleFilterPenal()"> 高级过滤<span class="icon icon-chevron-down"></span></d-button>
+  </div>
+  <div class="operation-area">
+    <d-button bsStyle="primary" (btnClick)="navigateTo('/admin/articles/new')">写文章</d-button>
+    <div class="more-operation" dDropDown>
+      <d-button bsStyle="common" dDropDownToggle>
+        更多操作
+        <span class="icon icon-chevron-down"></span>
+      </d-button>
+      <ul dDropDownMenu class="devui-dropdown-menu devui-scrollbar" role="menu">
+        <li role="menuitem"><a class="devui-dropdown-item" (click)="batchDelete()">批量删除</a></li>
+      </ul>
+    </div>
+    <div class="total-number">(总条数：{{total}})</div>
+    <d-pagination
+      [total]="total"
+      [pageSize]="pageSize"
+      [pageIndex]="pageIndex"
+      (pageSizeChange)="pageSizeChange($event)"
+      (pageIndexChange)="pageIndexChange($event)"
+      [lite]="true"
+      [canChangePageSize]="true"
+      [haveConfigMenu]="true">
+    </d-pagination>
+  </div>
+</div>
+
+<div class="filter-penal" *ngIf="showFilterPanel">
+  <app-article-filter-panel (condition)="onFilter($event)"></app-article-filter-panel>
+</div>
+
+<d-data-table
+  [dataSource]="articleList"
+  [type]="'striped'"
+  [checkable]="true"
+  (getCheckedRows)="getCheckedRows($event)"
+>
+
+  <d-column [header]="'标题'" [field]="'title'" [width]="'400px'"></d-column>
+  <d-column [header]="'标签'" [field]="'tags'" [width]="'180px'">
+    <d-cell>
+      <ng-template let-cellItem="cellItem">
+        <div class="tag-group">
+          <d-tag *ngFor="let tag of cellItem;" [tag]="tag" [labelStyle]="'blue-w98'"></d-tag>
+        </div>
+      </ng-template>
+    </d-cell>
+  </d-column>
+  <d-column [header]="'创建时间'" [field]="'createTime'" [width]="'150px'">
+    <d-cell>
+      <ng-template let-cellItem="cellItem">
+        {{cellItem| date:'yyyy-MM-dd HH:mm:ss'}}
+      </ng-template>
+    </d-cell>
+  </d-column>
+  <d-column [header]="'更新时间'" [field]="'updateTime'" [width]="'150px'">
+    <d-cell>
+      <ng-template let-cellItem="cellItem">
+        {{cellItem| date:'yyyy-MM-dd HH:mm:ss' }}
+      </ng-template>
+    </d-cell>
+  </d-column>
+  <d-column [header]="'操作'" [width]="'150px'">
+    <d-cell>
+      <ng-template let-rowItem="rowItem">
+        <d-button icon="icon-publish" bsStyle="text-dark" title="发布" *ngIf="activeListType ==='draft'"(btnClick)="publish(rowItem.id)"></d-button>
+        <d-button icon="icon-preview" bsStyle="text-dark" title="查看"*ngIf="activeListType ==='published'" (btnClick)="view(rowItem.id)"></d-button>
+        <d-button icon="icon-edit" bsStyle="text-dark" title="编辑" (btnClick)="edit(rowItem.id)"></d-button>
+        <d-button icon="icon-delete" bsStyle="text-dark" title="删除" (btnClick)="delete([rowItem.id])"></d-button>
+      </ng-template>
+    </d-cell>
+  </d-column>
+</d-data-table>
+
+<d-pagination
+  class="single-pagination"
+  [total]="total"
+  [pageSize]="pageSize"
+  [pageIndex]="pageIndex"
+  (pageIndexChange)="pageIndexChange($event)"
+  [size]="'sm'">
+</d-pagination>
+
+
+
+

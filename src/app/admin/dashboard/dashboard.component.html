@@ -1,0 +1,124 @@
+<div class="dashboard-container">
+    <div class="dashboard-card-container">
+        <div class="page-card-count">
+            <p class="title">已发布文章</p>
+            <div class="data-container">
+                <p class="big-data">{{cards[0]?.count}}</p>
+                <img src="../../../assets/img/dashboard/article.png" class="card-icon">
+            </div>
+            <div class="data-trend-container">
+                <span class="label">周同比</span>
+                <span class="data">{{cards[0]?.week}}</span>
+                <span class="data-trend-triangle-up"></span>
+                <span class="label">日同比</span>
+                <span class="data">{{cards[0]?.day}}</span>
+                <span class="data-trend-triangle-down"></span>
+            </div>
+        </div>
+        <div class="read-card-count">
+            <p class="title">总浏览量</p>
+            <div class="data-container">
+                <p class="big-data">{{cards[1]?.count}}</p>
+                <img src="../../../assets/img/dashboard/view.png" class="card-view-icon">
+            </div>
+            <div class="data-trend-container">
+                <span class="label">周同比</span>
+                <span class="data">{{cards[1]?.week}}</span>
+                <span class="data-trend-triangle-up"></span>
+                <span class="label">日同比</span>
+                <span class="data">{{cards[1]?.day}}</span>
+                <span class="data-trend-triangle-down"></span>
+            </div>
+        </div>
+        <div class="like-card-count">
+            <p class="title">总点赞量</p>
+            <div class="data-container">
+                <p class="big-data">{{cards[2]?.count}}</p>
+                <img src="../../../assets/img/dashboard/like.png" class="card-like-icon">
+            </div>
+            <div class="data-trend-container">
+                <span class="label">周同比</span>
+                <span class="data">{{cards[2]?.week}}</span>
+                <span class="data-trend-triangle-up"></span>
+                <span class="label">日同比</span>
+                <span class="data">{{cards[2]?.day}}</span>
+                <span class="data-trend-triangle-down"></span>
+            </div>
+        </div>
+        <div class="collcet-card-count">
+            <p class="title">总收藏量</p>
+            <div class="data-container">
+                <p class="big-data">{{cards[3]?.count}}</p>
+                <img src="../../../assets/img/dashboard/collect.png" class="card-like-icon">
+            </div>
+            <div class="data-trend-container">
+                <span class="label">周同比</span>
+                <span class="data">{{cards[3]?.week}}</span>
+                <span class="data-trend-triangle-up"></span>
+                <span class="label">日同比</span>
+                <span class="data">{{cards[3]?.day}}</span>
+                <span class="data-trend-triangle-down"></span>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-trend-container">
+        <div class="dashboard-trend-title">
+            <span>粉丝人数趋势图</span>
+            <div class="trend-time-field">
+                <d-select [size]="'sm'" [(ngModel)]="dateFormat" [options]="dateFormatOptions" style="width: 65px;" [filterKey]="'name'"
+                (valueChange) ="selectChange()">
+                </d-select>
+                <div class="devui-input-group">
+                    <input style="width:100px; margin-left: 10px; height: 30px;" class="devui-input"
+                        [placeholder]="'开始日期'" name="dp" [(ngModel)]="selectedStartDate" [dateFormat]="dateFormated"
+                        [showTime]="false" autocomplete="off" dDatepicker #datePicker1="datepicker"
+                        (focus)="datePicker1.toggle($event)" /></div><span
+                    class="time-picker-divider">至</span>
+                <div class="devui-input-group"><input style="width:100px; margin-left: 10px; height: 30px;"
+                        class="devui-input" [placeholder]="'结束日期'" name="dp" [(ngModel)]="selectedEndDate"
+                        [dateFormat]="dateFormated" [showTime]="false" autocomplete="off" dDatepicker
+                        #datePicker2="datepicker" (focus)="datePicker2.toggle($event)" />
+                </div>
+            </div>
+            
+        </div>
+        <div id="trend-charts" class="dashboard-trend-charts">
+
+        </div>
+    </div>
+    <div class="dashboard-pie-container">
+          <div class="fans-age-container">
+            <div class="dashboard-trend-title">
+                <span>粉丝年龄段分析</span>
+            </div>
+            <div id="fans-age" class="fans-age-charts" ></div>
+          </div>
+          <div class="author-list-container">
+            <d-tabs [type]="'tabs'">
+                <d-tab id="tab1" title="关注的作者" tabId="tab1">
+                  <ng-template dTabContent>
+                    <ul class="tab-content">
+                        <li *ngFor="let author of authors">
+                            <img src="../../../assets/img/dashboard/avator.png"/>
+                            <p class="author-name">{{author.name}}</p>
+                            <p class="dashboard-article-content">{{author.title}}</p>
+                             
+                        </li>
+                    </ul>
+                  </ng-template>
+                </d-tab>
+                <d-tab id="tab2" title="关注的专栏" tabId="tab2">
+                    <ng-template dTabContent>
+                        <ul  class="tab-content">
+                            <li *ngFor="let column of columns">
+                                <p class="column-name">{{column.name}}</p>
+                                <p class="dashboard-article-content">{{column.title}}</p>
+                                 
+                            </li>
+                        </ul>
+                    </ng-template>
+                  </d-tab>
+                </d-tabs>
+          </div>
+          
+    </div>

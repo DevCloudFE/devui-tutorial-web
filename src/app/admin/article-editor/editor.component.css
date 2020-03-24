@@ -1,0 +1,39 @@
+.devui-article-editor{
+  background-color: #f8f8f8;
+}
+.devui-breadcrumbs {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 10px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.devui-title-input{
+  width: 100%;
+  margin-top: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #293040;
+  border-width: 0 0 1px 0;
+  outline: none;
+  padding: 0 10px;
+}
+.devui-md-editor{
+  margin: 0 10px;
+  background: #fff;
+  box-shadow: 1px 0 2px 0 rgba(41,48,64,.1);
+}
+.devui-operators{
+  margin: 10px;
+}
+.devui-operators d-button{
+  margin-right: 20px;
+}
+.toolbar-container{
+  position: fixed;
+  top: 110px;
+  width: calc(100% - 20px);
+  border: none !important;
+}

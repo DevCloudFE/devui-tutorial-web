@@ -1,0 +1,18 @@
+<div class="devui-article-container">
+  <div class="article-main">
+    <div class="article-header">
+      <h1 class="article-title">{{title}}</h1>
+      <div class="article-meta">
+        <d-tag  *ngFor="let tag of tags;" [tag]="tag" [labelStyle]="'blue-w98'"></d-tag>
+      </div>
+    </div>
+    <div class="article-content" [innerHTML]="htmlContent"></div>
+    <div class="article-bottom">
+      <d-button bsStyle="text-dark" [disabled]="!prePageId" (btnClick)="goPage(prePageId)">上一篇</d-button>
+      <d-button bsStyle="text-dark" [disabled]="!nextPageId" (btnClick)="goPage(nextPageId)">下一篇</d-button>
+    </div>
+  </div>
+  <div class="outline-side">
+    <app-outline [articleDom]="articleDom" [scrollContainer]="scrollContainer" [width]="'200px'"></app-outline>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.search-area > *,
+.operation-area > *  {
+  display: inline-block;
+}
+.search-area > *:not(:first-child),
+.operation-area > *:not(:first-child) {
+  margin-left: 16px;
+}
+
+.operation-area ::ng-deep .devui-pagination .pagination{
+  margin: 0!important;
+}
+.more-operation {
+  vertical-align: top;
+}
+.single-pagination {
+  text-align: right;
+}
+.filter-penal {
+  background-color: #F5F5F5;
+  padding: 16px;
+}

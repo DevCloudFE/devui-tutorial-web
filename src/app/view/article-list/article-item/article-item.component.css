@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  padding: 16px;
+}
+.article-info > div {
+  display: inline-block;
+  color: #6f6f6f;
+}
+.article-info > div:not(:first-child) {
+  margin-left: 8px;
+}
+.article-preview {
+  padding: 8px 0;
+}
+a, a:visited {
+  color: #404040;
+}
+a:hover, a:active {
+  color: #5170ff;
+}

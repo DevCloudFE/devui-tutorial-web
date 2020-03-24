@@ -1,0 +1,7 @@
+<h2> 文章列表页 </h2>
+<d-tabs [activeTab]="activeTab" (activeTabChange)="activeTabChange($event)" [showContent]="false">
+  <d-tab id="published" title="已发布" tabId="published"></d-tab>
+  <d-tab id="draft" title="草稿箱" tabId="draft"> </d-tab>
+  <d-tab id="trash" title="回收站" tabId="trash"> </d-tab>
+</d-tabs>
+<router-outlet></router-outlet>

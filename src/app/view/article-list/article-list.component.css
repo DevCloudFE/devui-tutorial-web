@@ -1,0 +1,18 @@
+:host{
+  display: flex;
+}
+aside {
+  flex: 1 1 250px;
+}
+.content {
+  flex: 11 1 500px;
+}
+.article-list {
+  display: block;
+  margin: 8px 8px 16px 8px;
+  background-color: #fff;
+  box-shadow: 0 0 1px 1px rgba(64, 64, 64, 0.1);
+}
+li:not(:first-of-type) {
+  border-top: 1px solid rgba(64, 64, 64, 0.1);
+}

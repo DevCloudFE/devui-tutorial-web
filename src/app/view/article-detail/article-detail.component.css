@@ -1,0 +1,35 @@
+.devui-article-container {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  justify-content: center;
+  padding: 24px 0;
+  background-color: #fff;
+}
+
+.devui-article-container .article-main {
+  flex-basis: 690px;
+}
+
+.devui-article-container .outline-side {
+  flex-basis: 240px;
+  padding: 20px;
+}
+
+.article-main .article-meta {
+  padding: 5px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.article-main .article-content {
+  padding: 20px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.article-main .article-bottom {
+  margin: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}

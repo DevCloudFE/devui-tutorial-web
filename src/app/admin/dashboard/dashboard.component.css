@@ -1,0 +1,208 @@
+:host {
+    height: 100%;
+    width: 100%;
+}
+
+.dashboard-container {
+    height: 100%;
+    margin: 16px;
+}
+
+.dashboard-card-container {
+    height: 144px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.author-list-container .nav-tabs {
+    height: 52px;
+    padding-left: 16px;
+}
+
+.author-list-container .nav-tabs li {
+    height: 100%;
+    padding-top: 15px;
+    padding-left: 16px;
+}
+
+.tab-content {
+    margin-left: 16px;
+}
+
+.tab-content li {
+    height: 34px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.author-name{
+    margin-left: 16px;
+}
+.dashboard-article-content{
+   margin-left: 100px;
+   color: #797979;
+}
+
+.page-card-count,
+.read-card-count,
+.like-card-count,
+.collcet-card-count {
+    flex-grow: 1;
+    margin-right: 16px;
+    background: #fff;
+    width: 296px;
+    box-shadow: 0px 2px 2px 0 rgba(41, 48, 64, 0.2);
+}
+
+.title {
+    margin: 20px;
+    font-size: 14px;
+}
+
+.dashboard-trend-container {
+    height: 336px;
+    margin-bottom: 16px;
+    box-shadow: 0px 2px 2px 0 rgba(41, 48, 64, 0.2);
+    background: #fff;
+    margin-right: 16px;
+}
+
+.data-container {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    border-bottom: 1px solid #E5E5E5;
+    justify-content: space-between;
+}
+
+.dashboard-trend-charts {
+    height: 284px;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.trend-time-field {
+    display: flex;
+    margin-right: 118px;
+}
+
+.time-picker-divider {
+    margin-left: 9px;
+    margin-top: 5px;
+}
+
+/* .time-date-picker {
+    width:150px; margin-left: 10px; height: 30px;
+} */
+
+.data-trend-container {
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.data-trend-container>.label {
+    color: #ACACAC;
+    margin-right: 10px;
+}
+
+.data-trend-container>.data {
+    color: #000;
+    margin-right: 10px;
+}
+
+.data-trend-triangle-up {
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-bottom: 5px solid #d16b76;
+    margin-top: -5px;
+    margin-left: -5px;
+    margin-right: 20px;
+}
+
+
+.data-trend-triangle-down {
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top: 5px solid #7FBF45;
+    margin-bottom: -6px;
+    margin-left: -5px;
+    margin-right: 20px;
+}
+
+.card-icon {
+    margin-right: 33px;
+    width: 13px;
+    height: 16px;
+    margin-top: 5px;
+}
+
+.card-view-icon {
+    margin-right: 33px;
+    width: 16px;
+    height: 12px;
+    margin-top: 5px;
+}
+
+.card-like-icon {
+    margin-right: 33px;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+}
+
+.big-data {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.dashboard-trend-title {
+    height: 52px;
+    border-bottom: 1px solid #E5E5E5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+
+.dashboard-pie-container {
+    height: 356px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    display: flex;
+}
+
+.fans-age-container {
+    box-shadow: 0px 2px 2px 0 rgba(41, 48, 64, 0.2);
+    background: #fff;
+    flex-grow: 1;
+    margin-right: 16px;
+    width: 608px;
+
+}
+
+.author-list-container {
+    flex-grow: 1;
+    box-shadow: 0px 2px 2px 0 rgba(41, 48, 64, 0.2);
+    background: #fff;
+    width: 608px;
+}
+
+
+
+.fans-age-charts {
+    height: 302px;
+    padding-right: 50px;
+    /* margin-left: -20px; */
+}

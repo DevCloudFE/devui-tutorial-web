@@ -1,0 +1,15 @@
+<div class="devui-article-editor">
+  <div class="devui-breadcrumbs">
+    <div class="nav"><a>首页</a>&nbsp;>&nbsp;<span>{{currentId ? '编辑文章' : '写文章'}}</span></div>
+  </div>
+  <div class="devui-md-editor">
+    <input autocomplete="off" class="devui-title-input" maxlength="128" [(ngModel)]="title" placeholder="请输入文档标题" rows="1" type="text" style="height: 52px;">
+    <app-md *ngIf="showEditor" [content]="initContent" (contentChange)="contentChange($event)"></app-md>
+  </div>
+  <div class="devui-operators">
+    <d-button bsStyle="common" (btnClick)="cancelPost()">取消</d-button>
+    <d-button bsStyle="common" (btnClick)="postDoc(true)">保存草稿</d-button>
+    <d-button bsStyle="primary" (btnClick)="postDoc()">发布</d-button>
+  </div>
+</div>
+

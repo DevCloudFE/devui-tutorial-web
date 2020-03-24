@@ -1,0 +1,78 @@
+/*导入codemirror样式*/
+@import "codemirror/lib/codemirror.css";
+
+/*工具条样式*/
+.devui-md-container .toolbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #cacfd8;
+  background-color: #fff;
+}
+.toolbar-container .splitter-line {
+  height: 22px;
+  width: 1px;
+  background: #cacfd8;
+  margin-right: 10px;
+}
+
+.toolbar-container .toolbar-item {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.toolbar-container .toolbar-item:hover {
+  background-color: #f3f7fe;
+}
+.toolbar-container .toolbar-item .icon {
+  display: block;
+  width: 16px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.toolbar-item.bold .icon, .toolbar-item.italic .icon, .toolbar-item.underline .icon{
+  height: 16px;
+  margin-top: 4px;
+}
+
+.toolbar-container .toolbar-item.undo .icon{background-image: url(../../../../assets/img/editor/icon_undo.png);}
+ .toolbar-container .toolbar-item.redo .icon{background-image: url(../../../../assets/img/editor/icon_redo.png);}
+.toolbar-container .toolbar-item.bold .icon{background-image: url(../../../../assets/img/editor/icon_bold.png);}
+.toolbar-container .toolbar-item.italic .icon{background-image: url(../../../../assets/img/editor/icon_italic.png);}
+.toolbar-container .toolbar-item.underline .icon{background-image: url(../../../../assets/img/editor/icon_underline.png);}
+.toolbar-container .toolbar-item.ol .icon{background-image: url(../../../../assets/img/editor/icon_orderedlist.png);}
+.toolbar-container .toolbar-item.ul .icon{background-image: url(../../../../assets/img/editor/icon_unorderedlist.png);}
+.toolbar-container .toolbar-item.table .icon{background-image: url(../../../../assets/img/editor/icon_table.png);}
+.toolbar-item.text-icon {
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+  color: #000;
+  font-weight: 600;
+}
+
+/*编辑器主容器*/
+.devui-md-container .editor-container {
+  display: flex;
+  height: calc(100vh - 260px);
+}
+.editor-container .md-editor {
+  width: 50%;
+  flex-shrink: 0;
+}
+.editor-container .view-container {
+  width: 50%;
+  flex-shrink: 0;
+  padding: 20px;
+  border-left: 1px solid #cacfd8;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.CodeMirror-gutter.CodeMirror-linenumbers{
+  background-color: #fff;
+}

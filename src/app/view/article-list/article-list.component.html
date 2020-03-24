@@ -1,0 +1,20 @@
+<div class="content">
+  <ul class="article-list">
+    <li *ngFor="let article of articleList">
+      <app-article-item  [data]="article"></app-article-item>
+    </li>
+  </ul>
+  <d-pagination
+   *ngIf="total / pageSize > 1"
+   class="single-pagination"
+    [total]="total"
+    [pageSize]="pageSize"
+    (pageIndexChange)="pageIndexChange($event)"
+    [pageIndex]="pageIndex"
+    [size]="'sm'">
+  </d-pagination>
+</div>
+<aside>
+  <app-sidebar [articleCount]="total" [articleListView]="articleList"></app-sidebar>
+</aside>
+

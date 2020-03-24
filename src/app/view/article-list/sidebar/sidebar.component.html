@@ -1,0 +1,22 @@
+<div class="sidebar-box site-info">
+  <ul>
+    <li>
+      <div class="site-info-item">文章</div>
+      <div class="site-info-item-number">{{articleCount}}</div>
+    </li>
+    <li>
+      <div class="site-info-item">标签</div>
+      <div class="site-info-item-number">5</div>
+    </li>
+  </ul>
+</div>
+<div class="sidebar-box article-rank">
+  <h2 class="sidebar-box-title">阅读排行</h2>
+  <ol class="article-rank-list">
+    <li *ngFor="let article of articleListView">
+      <a [routerLink]="['/articles', article.id]">
+        {{article.title}}
+      </a>
+    </li>
+  </ol>
+</div>

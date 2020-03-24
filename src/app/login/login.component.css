@@ -1,0 +1,91 @@
+.login-content {
+    background: url('../../assets/img/login/login_backgroud.png') no-repeat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+:host {
+    height: 100vh;
+    width: 100%;
+}
+
+.login-feild {
+    width: 1184px;
+    height: 681px;
+    background: #fff;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.login-form,
+.login-img {
+    flex-grow: 1;
+}
+
+.login-form {
+    padding: 48px;
+    margin-right: 12px;
+}
+
+.login-without-password {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 15px;
+}
+.login-without-password > a{
+    color:#5170ff;
+}
+
+.login-text {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.login-input-feild {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-evenly;
+    padding: 0 5px;
+    margin-top: -10px;
+}
+
+.login-btn {
+    height: 50px;
+    background: #5E7CE0;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #5E7CE0;
+}
+
+.forget-password-field {
+    font-size: 15px;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: -10px;
+}
+
+
+.forget-password-text {
+    margin-right: 40px;
+}
+
+::placeholder {
+    color: #B0B0B0;
+}
+
+.login-input {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.login-img {
+    width: 592px;
+    background: url('../../assets/img/login/image_illustration.png') no-repeat;
+}

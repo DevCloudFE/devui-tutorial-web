@@ -1,0 +1,43 @@
+.sidebar-box {
+  display: block;
+  margin: 8px 8px 16px;
+  padding: 16px 8px;
+  background-color: #fff;
+  box-shadow: 0 0 1px 1px rgba(64, 64, 64, 0.1);
+}
+.sidebar-box-title {
+  display: block;
+  border-bottom: 1px solid rgba(64, 64, 64, 0.1);
+  font-size: 16px;
+  line-height: 26px;
+  margin: -8px 0 8px 0;
+  color: #6f6f6f;
+}
+.site-info ul {
+  display: flex;
+  justify-content: space-around;
+}
+.site-info ul li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+.site-info ul li:not(:first-child) {
+  border-left: 1px solid rgba(64, 64, 64, 0.1);
+}
+
+.article-rank-list li {
+  counter-increment: rank;
+  line-height: 26px;
+}
+.article-rank-list li a::before {
+  content: counter(rank);
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+}
+a, a:visited {
+  color: #404040;
+}
+a:hover, a:active {
+  color: #5170ff;
+}
