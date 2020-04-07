@@ -12,12 +12,10 @@
   margin-left: 16px;
 }
 
-.operation-area ::ng-deep .devui-pagination .pagination{
+.operation-area ::ng-deep .devui-pagination .devui-pagination-list {
   margin: 0!important;
 }
-.more-operation {
-  vertical-align: top;
-}
+
 .single-pagination {
   text-align: right;
 }

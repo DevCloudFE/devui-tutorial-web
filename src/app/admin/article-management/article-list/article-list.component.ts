@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { DialogService } from 'ng-devui';
+import { DialogService, DataTableComponent } from 'ng-devui';
 
 @Component({
   selector: 'app-article-list',
@@ -10,6 +10,7 @@ import { DialogService } from 'ng-devui';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit , OnDestroy {
+  @ViewChild(DataTableComponent, {static: false}) dataTable: DataTableComponent;
   showFilterPanel = false;
   subscription: Subscription;
   activeListType: string;
@@ -114,9 +115,6 @@ export class ArticleListComponent implements OnInit , OnDestroy {
     this.filterOption = event;
     this.getData();
   }
-  getCheckedRows(event) {
-    this.checkRows = event;
-  }
 
   delete(ids, batch= false) {
     let tips;
@@ -169,6 +167,7 @@ export class ArticleListComponent implements OnInit , OnDestroy {
       });
   }
   batchDelete() {
+    this.checkRows = this.dataTable.getCheckedRows();
     if (!this.checkRows || !this.checkRows.length) { return; }
     const ids = this.checkRows.map(row => row.id);
     this.delete(ids, true);
